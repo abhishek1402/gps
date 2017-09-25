@@ -1,0 +1,56 @@
+import { Component, OnInit } from '@angular/core';
+import { UserService } from "../services/user.service";
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { NotFoundError } from "../../common/error/notfound";
+
+@Component({
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.css']
+})
+export class LoginComponent implements OnInit {
+
+  loginForm: FormGroup;
+
+  constructor(private userservice:UserService,private fb:FormBuilder) {}
+
+  ngOnInit() {    
+    this.loginForm = this.fb.group(
+      {
+        "username":['',Validators.required],
+        "password":['',Validators.required]
+      }
+    )
+
+  }
+
+  public active:boolean = true;
+  ShowPass(){
+    this.active=!this.active;
+  }
+
+  get username(){
+    return this.loginForm.get('username')
+  }
+
+  get password(){
+    return this.loginForm.get('password')
+  }
+  submit(form:FormGroup){
+    this.userservice.postLogin(form)
+    .subscribe(
+        (res)=>{
+       
+        let token = res.token;
+        localStorage.setItem('currentUser', token );},
+
+        ((err:Error)=>{
+
+        if(err instanceof NotFoundError){
+          this.loginForm.setErrors({"notauser":true})
+          
+        }
+      })
+    )
+  }
+}

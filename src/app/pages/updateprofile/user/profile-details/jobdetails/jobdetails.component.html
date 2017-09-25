@@ -1,0 +1,90 @@
+<div class="row offset-lg-1">
+
+  <div class="col-lg-6 col-md-6  col-sm-4 offset-sm-2" (click)="change(Name)">
+    <div class="row">
+      <p class="UserLabel">Name</p>
+    </div>
+    <div class="row">
+      <input type="text" value="Abhishek"  #Name disabled>
+    </div>
+  </div>
+  <div class="col-lg-6 col-md-6  col-sm-4 offset-sm-2 " (click)="change(Designation)">
+    <div class="row">
+      <p class="UserLabel">Designation</p>
+    </div>
+    <div class="row">
+      <input type="text" value="Developer"  #Designation disabled>
+    </div>
+  </div>            
+
+</div>        
+<hr>
+
+<div class="row offset-lg-1">
+
+  <div class="col-lg-6 col-md-6  col-sm-4 offset-sm-2" (click)="change(Status)">
+    <div class="row">
+      <p class="UserLabel">Employment Status</p>
+    </div>
+    <div class="row">
+      <input type="text" value="Working"  #Status disabled>
+    </div>
+  </div>
+  <div class="col-lg-6 col-md-6  col-sm-4 offset-sm-2" (click)="change(Joining)">
+    <div class="row">
+      <p class="UserLabel">Joining Date</p>
+    </div>
+    <div class="row">
+      <input type="text" value="12/06/2017"  #Joining disabled>
+    </div>
+  </div>
+
+</div>        
+<hr>
+
+<div class="row offset-lg-1">
+
+  <div class="col-lg-6 col-md-6  col-sm-4 offset-sm-2"  (click)="change(Contract)">
+    <div class="row">
+      <p class="UserLabel">Contract</p>
+    </div>
+    <div class="row">
+      <input type="text" value="None"  #Contract disabled>
+    </div>
+  </div>
+  <div class="col-lg-6 col-md-6  col-sm-4 offset-sm-2" (click)="change(Location)">
+    <div class="row">
+      <p class="UserLabel">Location</p>
+    </div>
+    <div class="row">
+      <input type="text" value="Noida"  #Location disabled>
+    </div>
+  </div>
+
+</div>        
+<hr>
+
+<div class="row offset-lg-1">
+
+  <div class="col-lg-6 col-md-6  col-sm-4 offset-sm-2" (click)="change(Salary)">
+    <div class="row">
+      <p class="UserLabel">Salary</p>
+    </div>
+    <div class="row">
+      <input type="text" value="$100000"  #Salary disabled>
+    </div>
+  </div>
+  <div class="col-lg-6 col-md-6  col-sm-4 offset-sm-2" (click)="change(Mentor)">
+    <div class="row">
+      <p class="UserLabel">Mentor</p>
+    </div>
+    <div class="row">
+      <input type="text" value="Lorem"  #Mentor disabled>
+    </div>
+  </div>
+
+</div>        
+<hr>
+<div class="text-center m16">
+  <input type="button" class="btn" value="Update" (click)="Update(Name,Designation,Status,Joining,Contract,Location,Salary,Mentor)">
+</div>

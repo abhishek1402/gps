@@ -1,0 +1,5 @@
+<app-leftsidebar (isOut)="side($event)"></app-leftsidebar>
+<app-header (isOutput)="show($event)"></app-header>
+<div class="justify-content-center" [ngClass]="{'sidebarHome':isSelected,'sideHome':!isSelected, 'index1':isIndex}"><router-outlet></router-outlet></div>
+
+<app-rightsidebar [isInput]="isInput"></app-rightsidebar>

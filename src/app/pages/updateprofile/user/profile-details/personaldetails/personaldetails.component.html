@@ -1,0 +1,93 @@
+<form [formGroup]="updateForm">
+  <div class="row offset-lg-1">
+
+    <div class="col-lg-6 col-md-6 col-sm-4 offset-sm-2" (click)="change(Name)">
+      <div class="row">
+        <p class="UserLabel">Name</p>
+      </div>
+      <div class="row">
+        <input type="text" formControlName="txtName" #Name [value]="this.userData?.first_name"  >
+      </div>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-4 offset-sm-2" (click)="change(Mobile)">
+      <div class="row">
+        <p class="UserLabel">Mobile</p>
+      </div>
+      <div class="row">
+        <input type="text"  formControlName="txtMobile" #Mobile [value]="this.userData?.mobile">
+      </div>
+    </div>            
+
+  </div>        
+  <hr>
+
+  <div class="row offset-lg-1">
+
+    <div class="col-lg-6 col-md-6 col-sm-4 offset-sm-2" (click)="change(Address)">
+      <div class="row">
+        <p class="UserLabel">Address</p>
+      </div>
+      <div class="row">
+        <input type="text"  #Address disabled>
+      </div>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-4 offset-sm-2">
+      <div class="row">
+        <p class="UserLabel">Sex</p>
+      </div>
+      <div class="row">
+        <input type="text" value="Male" disabled>
+      </div>
+    </div>
+
+  </div>        
+  <hr>
+
+  <div class="row offset-lg-1">
+
+    <div class="col-lg-6 col-md-6 col-sm-4 offset-sm-2" (click)="change(Nationality)">
+      <div class="row">
+        <p class="UserLabel">Nationality</p>
+      </div>
+      <div class="row">
+        <input type="text" value="Indian" #Nationality disabled>
+      </div>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-4 offset-sm-2" (click)="change(City)">
+      <div class="row">
+        <p class="UserLabel">City</p>
+      </div>
+      <div class="row">
+        <input type="text"  formControlName="txtCity" #City disabled [value]="this.userData?.city">
+      </div>
+    </div>
+
+  </div>        
+  <hr>
+
+  <div class="row offset-lg-1">
+
+    <div class="col-lg-6 col-md-6 col-sm-4 offset-sm-2" (click)="change(State)"  >
+      <div class="row">
+        <p class="UserLabel">State</p>
+      </div>
+      <div class="row">
+        <input type="text"  formControlName="txtState" #State disabled [value]="this.userData?.state">
+      </div>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-4 offset-sm-2" (click)="change(Country)" >
+      <div class="row">
+        <p class="UserLabel">Country</p>
+      </div>
+      <div class="row">
+        <input type="text" formControlName="txtCountry" #Country disabled [value]="this.userData?.country">
+      </div>
+    </div>
+
+  </div>        
+  <hr>
+  <div class="text-center m16">
+    <input type="button" class="btn" value="Update" (click)="Update()">
+  </div>
+</form>  
+  

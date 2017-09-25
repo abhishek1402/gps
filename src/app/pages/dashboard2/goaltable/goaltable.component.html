@@ -1,0 +1,59 @@
+<div class="container-fluid row no-gutters">
+  <div class="col-12 text-center divHeaderBox">
+    <h3>Goals</h3>
+  </div>
+
+  <div class="col-12 divHeaderBox">
+    <div class="row my-1">
+      <div class="col-12">
+        <div class="row">
+
+          <!-- <div class="col-10">
+            <div class="row">
+              <div class="col-1">
+                <i class="fa fa-calendar-check-o faGoalCalender" aria-hidden="true"></i>
+              </div>
+               <input type="text" class="form-control" placeholder="Datepicker" bsDatepicker #dp="bsDatepicker"/> 
+              <input type="text" class="form-control" #dp="bsDatepicker" bsDatepicker [(bsValue)]="bsValue">  
+
+            </div>
+          </div> -->
+          
+          <div class="col-2 ">
+            <i class="fa fa-calendar-check-o float-left faGoalCalender" aria-hidden="true" #dp="bsDatepicker" bsDatepicker [(bsValue)]="bsValue"></i>
+          </div>
+          <div class="col-8 hidetym">
+            <label class="lblSelectedCurrentDate">{{bsValue}}</label>
+          </div>
+          <div class="col-2 col10">
+            <i class="btn float-right fa fa-plus-square-o fa-lg" (click)="Row()"></i>
+          </div>
+      </div>
+
+      </div>
+    </div>
+    <div class="scrollx">
+      <div class="row w893 thead no-gutters commonBackground">
+
+            <div class="col-2 w145">Goal Name</div>
+            <div class="col-3 w220">Goal Description</div>
+            <div class="col-2 w145">Time Duration</div>
+            <div class="col-2 w145">Time</div>
+            <div class="col-2 w75">Progress</div>
+          
+        <!-- <tbody>
+          <tr *ngFor="let x of array">
+            <app-goalrow></app-goalrow>
+              
+          </tr>
+        </tbody> -->
+      </div>
+      <div  *ngFor="let x of array" >
+        
+            <app-goalrow [date]="bsValue" class="webkit"></app-goalrow>
+              
+          
+      </div>
+    </div>
+  </div>
+</div>

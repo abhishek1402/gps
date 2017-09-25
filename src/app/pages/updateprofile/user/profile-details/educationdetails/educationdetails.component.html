@@ -1,0 +1,112 @@
+<div class="row offset-lg-1">
+
+  <div class="col-lg-6 col-md-6  col-sm-4 offset-sm-2" (click)="change(Name)">
+    <div class="row">
+      <p class="UserLabel">Name</p>
+    </div>
+    <div class="row">
+      <input type="text" value="Abhishek"  #Name disabled>
+    </div>
+  </div>
+  <div class="col-lg-6 col-md-6  col-sm-4 offset-sm-2" (click)="change(Experience)">
+    <div class="row">
+      <p class="UserLabel">Work Experience</p>
+    </div>
+    <div class="row">
+      <input type="text" value="1 Year"  #Experience disabled>
+    </div>
+  </div>            
+
+</div>        
+<hr>
+
+<div class="row offset-lg-1">
+
+  <div class="col-lg-6 col-md-6  col-sm-4 offset-sm-2" (click)="change(SchoolPass)">
+    <div class="row">
+      <p class="UserLabel">School Passed year</p>
+    </div>
+    <div class="row">
+      <input type="text" value="2013"  #SchoolPass disabled>
+    </div>
+  </div>
+  <div class="col-lg-6 col-md-6  col-sm-4 offset-sm-2" (click)="change(SchoolGrade)">
+    <div class="row">
+      <p class="UserLabel">School Grade</p>
+    </div>
+    <div class="row">
+      <input type="text" value="A"  #SchoolGrade disabled>
+    </div>
+  </div>
+
+</div>        
+<hr>
+
+<div class="row offset-lg-1">
+
+  <div class="col-lg-6 col-md-6  col-sm-4 offset-sm-2" (click)="change(CollegePass)">
+    <div class="row">
+      <p class="UserLabel">College Passed year</p>
+    </div>
+    <div class="row">
+      <input type="text" value="2017"  #CollegePass disabled>
+    </div>
+  </div>
+  <div class="col-lg-6 col-md-6  col-sm-4 offset-sm-2" (click)="change(CollegeGrade)">
+    <div class="row">
+      <p class="UserLabel">College Grade</p>
+    </div>
+    <div class="row">
+      <input type="text" value="A"  #CollegeGrade disabled>
+    </div>
+  </div>
+
+</div>        
+<hr>
+
+<div class="row offset-lg-1">
+
+  <div class="col-lg-6 col-md-6  col-sm-4 offset-sm-2" (click)="change(Skills)">
+    <div class="row">
+      <p class="UserLabel">Skills</p>
+    </div>
+    <div class="row">
+      <input type="text" value="Lorem"  #Skills disabled>
+    </div>
+  </div>
+  <div class="col-lg-6 col-md-6  col-sm-4 offset-sm-2" (click)="change(Languages)">
+    <div class="row">
+      <p class="UserLabel">Languanges</p>
+    </div>
+    <div class="row">
+      <input type="text" value="English, Hindi"  #Languages disabled>
+    </div>
+  </div>
+
+</div>        
+<hr>
+
+<div class="row offset-lg-1">
+
+  <div class="col-lg-6 col-md-6  col-sm-4 offset-sm-2" (click)="change(License)">
+    <div class="row">
+      <p class="UserLabel">License</p>
+    </div>
+    <div class="row">
+      <input type="text" value="Ipsum"  #License disabled>
+    </div>
+  </div>
+  <div class="col-lg-6 col-md-6  col-sm-4 offset-sm-2" (click)="change(Others)">
+    <div class="row">
+      <p class="UserLabel">Others</p>
+    </div>
+    <div class="row">
+      <input type="text" value="Dolor"  #Others disabled>
+    </div>
+  </div>
+
+</div>        
+<hr>
+<div class="text-center m16">
+  <input type="button" class="btn" value="Update" (click)="Update(Name,Experience,SchoolPass,SchoolGrade,CollegePass,CollegeGrade,Skills,Languages,License,Others)">
+</div>

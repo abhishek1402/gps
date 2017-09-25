@@ -1,0 +1,15 @@
+import { NgModule, ModuleWithProviders } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+import { PagesComponent } from "./pages.component";
+
+const routes: Routes = [
+    { path: '',  component:PagesComponent,
+    children:[
+      { path: '',loadChildren: './login/login.module#LoginModule',},
+      { path: 'dashboard',loadChildren: './dashboard/dashboard.module#DashboardModule',},  
+      { path: 'dashboard2',loadChildren: './dashboard2/dashboard2.module#Dashboard2Module',},    
+    ]
+},
+];
+export const PagesRouting: ModuleWithProviders = RouterModule.forChild(routes);
+

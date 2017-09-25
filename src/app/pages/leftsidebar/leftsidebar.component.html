@@ -1,0 +1,46 @@
+<div class="col-lg-2 sidebar no-gutters">
+  <div [ngClass]="{'side':!active,'side1':active}" #patientDDL >  
+    <div class="Metronic">
+      <!-- <img src="../../assets/image/goal.png" height="40"> -->
+      <h4 class="float-left" id="headerLabel" >GPS</h4>
+      <i class="fa fa-bars fa-lg float-right faLeftSideBarIcon commonBackground" aria-hidden="true" (click)="HideSidebar()"></i>
+    </div>   
+    
+      <ul [ngClass]="{'display':!active}" class="pt-57 fixed" #index>
+        <li class="SidebarLi transform li" [ngClass]="{'sidebarWidth':!active}"  (click)="Collapse(li)" (mouseenter)="MouseEnter(li,index)" (mouseleave)="MouseLeave(li,index)" >
+          <i class="fa fa-home" aria-hidden="true" [ngClass]="{'translate290':!active}"></i>
+          <span [ngClass]="{'HidingLabel':!active}" >Dashboard
+            <i class="fa float-right fa-caret-left" aria-hidden="true"></i>
+          </span>        
+          <ul #li class="sub-menu SidebarUl height">
+            <li [ngClass]="{'HidingLabel':active}" class="LabelHead">Dashboard</li>
+            <li [routerLinkActive]="['active']" [routerLink]="['/pages/dashboard']"><i class="fa fa-home labelChild faColor"  aria-hidden="true"></i>Dashboard</li>
+          </ul>   
+        </li>
+        <li class="SidebarLi transform li" [ngClass]="{'sidebarWidth':!active}"  (click)="Collapse(li1)" (mouseenter)="MouseEnter(li1,index)" (mouseleave)="MouseLeave(li1,index)" >
+          <i class="fa fa-cogs" aria-hidden="true" [ngClass]="{'translate290':!active}"></i>
+          <span [ngClass]="{'HidingLabel':!active}" >Set Up
+            <i class="fa float-right fa-caret-left" aria-hidden="true"></i>
+          </span>        
+          <ul #li1 class="sub-menu SidebarUl height">
+            <li [ngClass]="{'HidingLabel':active}" class="LabelHead">Set Up</li>
+            <li [routerLinkActive]="['active']" [routerLink]="['/pages/signup-user']"><i class="fa fa-registered labelChild faColor"  aria-hidden="true"></i>User Registration</li>
+            <li [routerLinkActive]="['active']" [routerLink]="['/pages/access-management']"><i class="fa fa-universal-access labelChild faColor"  aria-hidden="true"></i>Access Management</li>
+          </ul>   
+        </li>
+        <li class="SidebarLi transform li" [ngClass]="{'sidebarWidth':!active}"  (click)="Collapse(li3)" (mouseenter)="MouseEnter(li3,index)" (mouseleave)="MouseLeave(li3,index)" >
+          <i class="fa fa-tasks" aria-hidden="true" [ngClass]="{'translate290':!active}"></i>
+          <span [ngClass]="{'HidingLabel':!active}" >Goals
+            <i class="fa float-right fa-caret-left" aria-hidden="true"></i>
+          </span>        
+          <ul #li3 class="sub-menu SidebarUl height">
+            <li [ngClass]="{'HidingLabel':active}" class="LabelHead">Goals</li>
+            <li [routerLinkActive]="['active']" [routerLink]="['/pages/dashboard2']"><i class="fa fa-tasks labelChild faColor"  aria-hidden="true"></i>Add Goals</li>
+            <li [routerLinkActive]="['active']" [routerLink]="['/pages/dashboard2']"><i class="fa fa-eye labelChild faColor"  aria-hidden="true"></i>View Goals</li>
+          </ul>   
+        </li>
+      <li class="nonHover transform" [ngClass]="{'sidebarWidth':!active}" style="height:-webkit-fill-available"></li>
+      </ul>
+    
+  </div>
+</div>

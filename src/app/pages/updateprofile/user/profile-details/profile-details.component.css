@@ -1,0 +1,154 @@
+.UserLabel{
+    font-weight: 500;
+    color: darkgray;
+}
+.UserField{
+    color: #708090;
+}
+.w100{
+    width: 100%;
+}
+.mt-30{
+    margin-top: 30px;
+}
+.ml-50{
+    margin-left: 50px;
+}
+.br-10{
+    border-right: 10px solid #e4e5e6;
+}
+input[type=file]{ 
+    color:cornflowerblue !important
+}
+.progress{
+    background: transparent;
+}
+.colorRed{
+    background:#e7505a;
+}
+.colorYellow{
+    background: #F1C40F;
+}
+.colorBlue{
+    background: #36c6d3;
+}
+.btn{
+    color: #fff;
+    background: #1C4561;
+    font-size: 16px;
+    font-weight: 600;
+    box-shadow: none !important;
+}
+.btn:hover{
+    background: #22232B;
+}
+.btn-group > .btn:focus{
+    z-index: 0;
+}
+.colorBlack{
+    background: #22232B;
+}
+.InfoHeader{
+    border-bottom: 1px solid #e8e0e0;
+    text-align: center;
+    background: #1C4561;
+    color: white;
+    font-weight: 500;
+}
+img{
+    border: 1px solid darkgrey;
+}
+.img:hover ~ img{
+    opacity: 0.4;
+    filter: grayscale(20);
+}
+.img:hover ~ .overlay{
+    opacity: 1;
+}
+.overlay {
+    font-size: 20px;
+    color: #1c4561;
+    font-weight: 500;
+    position: absolute;
+    top:35%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+}
+.hide_file {
+    position: absolute;
+    z-index: 1000;
+    opacity: 0;
+    /* right: 47px; */
+    /* top: 24px; */
+    height: 150px;
+    font-size: 24px;
+    width: 150px;
+}
+.w100{
+    width: 100% !important;
+}
+.m-auto{
+    margin: 0 auto;
+}
+.m16{
+    margin-bottom: 16px;
+}
+.px6{
+    padding: 6px 0;
+}
+.hide{
+    display: none;
+}
+@media screen and (max-width: 425px){
+    .mb20{
+        margin-bottom: 20px;
+    }
+    .pt76{
+        padding-top:0px;
+    }
+}
+@media screen and (min-width: 768px){
+    .offset-lg-1{
+        margin-left: 8%;
+    }
+}
+@media screen and (max-width: 499px){
+    .personal{
+        line-height: 0;
+        text-indent: -9999px;
+    }
+    .personal::after{
+        content: "Personal";
+        text-indent: 0;
+        display: block;
+        line-height: initial;
+    }
+    .job{
+        line-height: 0;
+        text-indent: -9999px;
+    }
+    .job::after{
+        content: "Job";
+        text-indent: 0;
+        display: block;
+        line-height: initial;
+    }
+    .education{
+        line-height: 0;
+        text-indent: -9999px;
+    }
+    .education::after{
+        content: "Education";
+        text-indent: 0;
+        display: block;
+        line-height: initial;
+    }
+    .br-10{
+        border: none;
+    }
+}

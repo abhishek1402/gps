@@ -1,0 +1,39 @@
+<div class="container-fluid" id="contaner-box">
+  <div class="col-md-12 divHeaderBox">
+    <h3>Access Management</h3>
+  </div>
+  <div class="col-md-12 divContainer">
+    <div class="row">
+      <div class="divContentBox">
+          <div class="full_aligned">
+            <div class="half_aligned">
+              <div class="forty_aligned">
+                <label class="control-label">User Name</label>
+              </div>
+              <div class="forty_aligned">
+                <select class="form-control">
+                  <option value="0">--Select</option>
+                  <option *ngFor="let data of userArray" [value]="data.id">{{data.first_name}}</option>
+                </select>
+              </div>
+            </div>
+            <div class="half_aligned">
+              <div class="forty_aligned">
+                <label class="control-label">User Roles</label>
+              </div>
+              <div class="forty_aligned">
+                <select class="form-control">
+                  <option value="0">--Select--</option>
+                  <option *ngFor="let data of userRoles" [value]="data.id">{{data.name}}</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="full_aligned" align="center">
+            <button class="btn btn-common">Save</button>
+            <button class="btn btn-common">Reset</button>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
